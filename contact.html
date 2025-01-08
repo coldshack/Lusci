@@ -116,7 +116,7 @@
             text-decoration: none;
         }
 
-        .home-section {
+        .contact-section {
             height: 100vh;
             background: url('bg.png') no-repeat center center/cover;
             display: flex;
@@ -128,17 +128,34 @@
             position: relative;
         }
 
-        .home-title {
-            font-size: calc(24px + 8vw);
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-            text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            opacity: 0.8;
-            animation: fadeIn 2s forwards;
-            position: absolute;
+        .contact-form {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
             z-index: 1;
-            opacity: 0;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: white;
+            cursor: pointer;
         }
 
         .background-image {
@@ -149,31 +166,6 @@
             height: 100%;
             background: inherit;
             z-index: 0;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 0.5;
-            }
-        }
-
-        .music-section, .about-section, .contact-section {
-            padding: 20px;
-            background-color: white;
-            margin: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-content {
-            display: flex;
-            align-items: center;
-        }
-
-        .about-content img {
-            max-width: 200px;
-            margin-right: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .footer-content {
@@ -224,7 +216,6 @@
                 margin-top: 10px;
             }
         }
-        
     </style>
 </head>
 <body>
@@ -249,10 +240,18 @@
             <a href="#">Spotify</a>
         </div>
     </nav>
-    <!-- Home -->
-    <div id="home" class="home-section">
+    <!-- Contact Us -->
+    <div id="contact" class="contact-section">
         <div class="background-image"></div>
-        <h2 class="home-title">Luscinia</h2>
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </div>
     <!-- Footer -->
     <footer>
