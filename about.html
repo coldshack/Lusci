@@ -116,64 +116,39 @@
             text-decoration: none;
         }
 
-        .home-section {
-            height: 100vh;
+        .about-section {
             background: url('bg.png') no-repeat center center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(100, 100, 100, 0.95);
-            position: relative;
-        }
-
-        .home-title {
-            font-size: calc(24px + 8vw);
-            font-family: 'Times New Roman', Times, serif;
-            color: white;
-            text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            opacity: 0.8;
-            animation: fadeIn 2s forwards;
-            position: absolute;
-            z-index: 1;
-            opacity: 0;
-        }
-
-        .background-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw; /* Takes the entire horizontal viewport */
-            height: 100%;
-            background: inherit;
-            z-index: 0;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 0.5;
-            }
-        }
-
-        .music-section, .about-section, .contact-section {
+            height: 100vh;
             padding: 20px;
-            background-color: white;
-            margin: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #000000;
+            color: white;
+            text-align: center; /* Center text */
         }
 
         .about-content {
+            font-family: 'Arial', sans-serif;
             display: flex;
+            flex-direction: column; /* Stack items vertically */
             align-items: center;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.8); /* More opaque background */
+            padding: 40px; /* More padding */
+            border-radius: 15px; /* More rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger box shadow */
         }
 
-        .about-content img {
-            max-width: 200px;
-            margin-right: 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .about-content .name {
+            font-size: 2.5em; /* Larger font size */
+            font-weight: bold;
+            margin-bottom: 20px; /* Space below name */
+        }
+
+        .about-content .description {
+            font-size: 1.5em; /* Larger font size */
+            line-height: 1.5; /* Better line spacing */
         }
 
         .footer-content {
@@ -224,7 +199,6 @@
                 margin-top: 10px;
             }
         }
-
     </style>
 </head>
 <body>
@@ -249,10 +223,12 @@
             <a href="#">Spotify</a>
         </div>
     </nav>
-    <!-- Home -->
-    <div id="home" class="home-section">
-        <div class="background-image"></div>
-        <h2 class="home-title">Luscinia</h2>
+    <!-- About -->
+    <div id="about" class="about-section">
+        <div class="about-content">
+            <div class="name">Luscinia</div>
+            <div class="description">Luscinia is a musician and music composer. Plays piano mostly, creating beautiful and touching melodies that resonate with the soul.</div>
+        </div>
     </div>
     <!-- Footer -->
     <footer>
